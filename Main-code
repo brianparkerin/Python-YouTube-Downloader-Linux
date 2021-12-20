@@ -1,0 +1,19 @@
+from pytube import YouTube
+from pytube.extract import video_info_url
+
+
+url = input("Introduce the URL Here:")
+yt = YouTube(url)
+print(yt.title)
+print("Downloading...")
+
+# Nota: Si le pones un "." a la ruta del directorio automaticamente creará un volumen por defecto... --> ejmp: YouTube(url).streams.get_highest_resolution().download(r"./home/square/Desktop/Downloader")
+# Nota: Si, No le pones ningun "." denlante de la ruta no creara ningun volumen a parte y lod escargará todo automaticamente dentro de la carpeta que estes trabajando...  --> ejmp: YouTube(url).streams.get_highest_resolution().download(r"/home/square/Desktop/Downloader")
+
+#code:
+
+YouTube(url).streams.get_highest_resolution().download(r"/home/square/Downloads")
+#YouTube(url).streams.get_highest_resolution().download(r"/home/square/Desktop/Downloader")
+#YouTube(url).streams.get_audio_only().download(r"/home/square/Desktop/Downloader")
+
+print("The download was finished succesfully!!") 
