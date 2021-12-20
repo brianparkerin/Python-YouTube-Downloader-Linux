@@ -7,6 +7,8 @@ yt = YouTube(url)
 print(yt.title)
 print("Downloading...")
 
-YouTube(url).streams.get_highest_resolution().first().download(r"/home/square/Downloads")
+
+#YouTube(url).streams.get_highest_resolution().download()
+YouTube(url).streams.get_highest_resolution().download(r"/home/square/Downloads")
 
 print("The download was finished succesfully!!")
