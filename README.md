@@ -1,7 +1,7 @@
 # Python-YouTube-Downloader-Linux
 
 
-## Command:
+## Run Command:
 
 $ python app.py
 
