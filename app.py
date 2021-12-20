@@ -9,6 +9,7 @@ print("Downloading...")
 
 
 #YouTube(url).streams.get_highest_resolution().download()
+#YouTube(url).streams.get_audio_only().download(r"/home/square/Desktop/Downloader")
 YouTube(url).streams.get_highest_resolution().download(r"/home/square/Downloads")
 
 print("The download was finished succesfully!!")
