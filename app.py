@@ -8,8 +8,13 @@ print(yt.title)
 print("Downloading...")
 
 
+# Example Code
 #YouTube(url).streams.get_highest_resolution().download()
-#YouTube(url).streams.get_audio_only().download(r"/home/square/Desktop/Downloader")
-YouTube(url).streams.get_highest_resolution().download(r"/home/square/Downloads")
+#YouTube(url).streams.get_audio_only().download()
+#YouTube(url).streams.get_highest_resolution().download(r"/home/square/Downloads")
+
+# Normal Download Functions
+YouTube(url).streams.get_audio_only().download(r"/home/square/Desktop/Music")
+YouTube(url).streams.get_highest_resolution().download(r"/home/square/Videos")
 
 print("The download was finished succesfully!!")
