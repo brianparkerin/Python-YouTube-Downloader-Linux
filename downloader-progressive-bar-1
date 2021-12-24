@@ -1,0 +1,19 @@
+import progress
+from pytube import YouTube, streams
+from pytube.extract import video_info_url
+from progress.bar import Bar, IncrementalBar
+
+
+
+url = input("Enter URL Here: ")
+yt = YouTube(url)
+print(yt.title)
+
+bar = IncrementalBar('Processing', suffix='%(percent)d%%')
+for i in range(100):
+    # Download function with progressive bar en porcentaje alt version: 100/100 watch docs
+    yt.streams.get_highest_resolution().download(r"/home/square/Desktop/Downloads")
+    bar.next()
+bar.finish()
+
+print("The download was finished succesfully!!")
